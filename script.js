@@ -16,14 +16,12 @@ const checkIsPalindrome = (testString) => {
         alert('Please input a value');
         return;
     }
-    resultDiv.replaceChildren();
-    originalTestString = testString;
+    resultDiv.innerText = '';
+    let originalTestString = testString;
     let resultText = `${originalTestString} ${
         isPalindrome(testString) ? "is" : "is not"
     } a palindrome`
-    const pTag = document.createElement('p');
-    pTag.innerText = resultText;
-    resultDiv.appendChild(pTag);
+    resultDiv.innerText = resultText;
 };
 
 checkButton.addEventListener('click', () => {
